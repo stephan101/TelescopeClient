@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="org.dddmuffi.myapplication.MyLocation"
+    android:focusableInTouchMode="@bool/autolocation">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Latidude"
+        android:id="@+id/latitudeText"
+        android:layout_below="@+id/getGPSButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="39dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Longitude"
+        android:id="@+id/longitudeText"
+        android:layout_alignBottom="@+id/longeditText"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/height"
+        android:id="@+id/altText"
+        android:layout_below="@+id/longitudeText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="125dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/autocalibration"
+        android:id="@+id/autolocCheckBox"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Get_GPS"
+        android:id="@+id/getGPSButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:ems="10"
+        android:id="@+id/lateditText"
+        android:clickable="true"
+        android:layout_alignBottom="@+id/latitudeText"
+        android:layout_toEndOf="@+id/getGPSButton" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/lateditText2"
+        android:inputType="number|numberDecimal"
+        android:layout_below="@+id/lateditText"
+        android:layout_alignStart="@+id/lateditText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:ems="10"
+        android:id="@+id/longeditText"
+        android:clickable="true"
+        android:layout_below="@+id/lateditText2"
+        android:layout_alignStart="@+id/lateditText2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/longeditText2"
+        android:clickable="true"
+        android:layout_below="@+id/longeditText"
+        android:layout_alignEnd="@+id/longeditText"
+        android:inputType="time|numberDecimal"
+        android:layout_alignStart="@+id/longeditText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/alteditText"
+        android:clickable="true"
+        android:layout_alignBottom="@+id/altText"
+        android:layout_toEndOf="@+id/getGPSButton"
+        android:inputType="number|numberDecimal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/set_loc"
+        android:id="@+id/setLocButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/format_switch"
+        android:id="@+id/switchFormat"
+        android:longClickable="true"
+        android:layout_below="@+id/getGPSButton"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
